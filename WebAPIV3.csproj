@@ -1,0 +1,459 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b53545d4-6d9e-45fa-81d4-d4291ac31077</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove=".config\**" />
+    <Compile Remove="obj\**" />
+    <Content Remove=".config\**" />
+    <Content Remove="obj\**" />
+    <EmbeddedResource Remove=".config\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove=".config\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\VLEController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0-windows\appsettings.Development.json" />
+    <Content Include="bin\Debug\net8.0-windows\appsettings.json" />
+    <Content Include="bin\Debug\net8.0-windows\WebAPIV3.deps.json" />
+    <Content Include="bin\Debug\net8.0-windows\WebAPIV3.runtimeconfig.json" />
+    <Content Include="bin\Debug\net8.0-windows\WebAPIV3.staticwebassets.endpoints.json" />
+    <Content Include="bin\Release\net8.0-windows\appsettings.Development.json" />
+    <Content Include="bin\Release\net8.0-windows\appsettings.json" />
+    <Content Include="bin\Release\net8.0-windows\WebAPIV3.deps.json" />
+    <Content Include="bin\Release\net8.0-windows\WebAPIV3.runtimeconfig.json" />
+    <Content Include="bin\Release\net8.0-windows\WebAPIV3.staticwebassets.endpoints.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr" Version="3.5.0.2" />
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="Aspose.PDF" Version="25.4.0" />
+    <PackageReference Include="EPPlus" Version="8.0.2" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.69.0" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0-preview.3.25171.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1652.0" />
+    <PackageReference Include="MySql.Data" Version="9.3.0" />
+    <PackageReference Include="RestSharp" Version="112.1.1-alpha.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="WebGrease" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net8.0\" />
+    <Folder Include="DataSet\" />
+    <Folder Include="Models\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0-windows\Antlr3.Runtime.dll" />
+    <None Include="bin\Debug\net8.0-windows\AspNetCore.Reporting.dll" />
+    <None Include="bin\Debug\net8.0-windows\AspNetCore.ReportingServices.dll" />
+    <None Include="bin\Debug\net8.0-windows\Aspose.PDF.dll" />
+    <None Include="bin\Debug\net8.0-windows\Azure.Core.dll" />
+    <None Include="bin\Debug\net8.0-windows\Azure.Identity.dll" />
+    <None Include="bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll" />
+    <None Include="bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\EPPlus.dll" />
+    <None Include="bin\Debug\net8.0-windows\EPPlus.Interfaces.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\Google.Apis.Auth.dll" />
+    <None Include="bin\Debug\net8.0-windows\Google.Apis.Core.dll" />
+    <None Include="bin\Debug\net8.0-windows\Google.Apis.dll" />
+    <None Include="bin\Debug\net8.0-windows\Google.Protobuf.dll" />
+    <None Include="bin\Debug\net8.0-windows\itextsharp.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll" />
+    <None Include="bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll" />
+    <None Include="bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.AspNetCore.Server.Kestrel.Https.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.ObjectPool.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.OpenApi.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.ReportViewer.Common.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.ReportViewer.DataVisualization.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.ReportViewer.Design.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.ReportViewer.WebDesign.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.ReportViewer.WebForms.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.SqlServer.Types.dll" />
+    <None Include="bin\Debug\net8.0-windows\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Debug\net8.0-windows\MySql.Data.dll" />
+    <None Include="bin\Debug\net8.0-windows\Newtonsoft.Json.Bson.dll" />
+    <None Include="bin\Debug\net8.0-windows\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\RestSharp.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Windows.Extensions.dll" />
+    <None Include="bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Debug\net8.0-windows\Swashbuckle.Core.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.ClientModel.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.CodeDom.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.IO.Pipelines.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Management.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Memory.Data.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Net.Http.Formatting.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Security.Cryptography.Xml.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Security.Permissions.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.ServiceModel.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.ServiceModel.Http.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.ServiceModel.Primitives.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Text.Json.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Web.Cors.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Web.Http.Cors.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Web.Http.dll" />
+    <None Include="bin\Debug\net8.0-windows\System.Windows.Extensions.dll" />
+    <None Include="bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\WebAPIV3.dll" />
+    <None Include="bin\Debug\net8.0-windows\WebAPIV3.exe" />
+    <None Include="bin\Debug\net8.0-windows\WebAPIV3.pdb" />
+    <None Include="bin\Debug\net8.0-windows\WebGrease.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net8.0-windows\ZstdSharp.dll" />
+    <None Include="bin\Release\net8.0-windows\Antlr3.Runtime.dll" />
+    <None Include="bin\Release\net8.0-windows\AspNetCore.Reporting.dll" />
+    <None Include="bin\Release\net8.0-windows\AspNetCore.ReportingServices.dll" />
+    <None Include="bin\Release\net8.0-windows\Aspose.PDF.dll" />
+    <None Include="bin\Release\net8.0-windows\Azure.Core.dll" />
+    <None Include="bin\Release\net8.0-windows\Azure.Identity.dll" />
+    <None Include="bin\Release\net8.0-windows\BouncyCastle.Cryptography.dll" />
+    <None Include="bin\Release\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\EPPlus.dll" />
+    <None Include="bin\Release\net8.0-windows\EPPlus.Interfaces.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\Google.Apis.Auth.dll" />
+    <None Include="bin\Release\net8.0-windows\Google.Apis.Core.dll" />
+    <None Include="bin\Release\net8.0-windows\Google.Apis.dll" />
+    <None Include="bin\Release\net8.0-windows\Google.Protobuf.dll" />
+    <None Include="bin\Release\net8.0-windows\itextsharp.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\K4os.Compression.LZ4.dll" />
+    <None Include="bin\Release\net8.0-windows\K4os.Compression.LZ4.Streams.dll" />
+    <None Include="bin\Release\net8.0-windows\K4os.Hash.xxHash.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.AspNetCore.Server.Kestrel.Https.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Bcl.Cryptography.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.DependencyModel.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Logging.Console.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Logging.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.ObjectPool.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Extensions.Options.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Identity.Client.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.OpenApi.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.ReportViewer.Common.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.ReportViewer.DataVisualization.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.ReportViewer.Design.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.ReportViewer.WebDesign.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.ReportViewer.WebForms.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.SqlServer.Server.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.SqlServer.Types.dll" />
+    <None Include="bin\Release\net8.0-windows\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Release\net8.0-windows\MySql.Data.dll" />
+    <None Include="bin\Release\net8.0-windows\Newtonsoft.Json.Bson.dll" />
+    <None Include="bin\Release\net8.0-windows\Newtonsoft.Json.dll" />
+    <None Include="bin\Release\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\RestSharp.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\comerr64.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\gssapi64.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\krb5_64.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\krbcc64.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Windows.Extensions.dll" />
+    <None Include="bin\Release\net8.0-windows\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Release\net8.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Release\net8.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Release\net8.0-windows\Swashbuckle.Core.dll" />
+    <None Include="bin\Release\net8.0-windows\System.ClientModel.dll" />
+    <None Include="bin\Release\net8.0-windows\System.CodeDom.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Configuration.ConfigurationManager.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Data.SqlClient.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Diagnostics.EventLog.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Diagnostics.PerformanceCounter.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Drawing.Common.dll" />
+    <None Include="bin\Release\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Release\net8.0-windows\System.IO.Pipelines.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Management.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Memory.Data.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Net.Http.Formatting.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Security.Cryptography.Pkcs.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Security.Cryptography.Xml.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Security.Permissions.dll" />
+    <None Include="bin\Release\net8.0-windows\System.ServiceModel.dll" />
+    <None Include="bin\Release\net8.0-windows\System.ServiceModel.Http.dll" />
+    <None Include="bin\Release\net8.0-windows\System.ServiceModel.Primitives.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Text.Json.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Web.Cors.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Web.Http.Cors.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Web.Http.dll" />
+    <None Include="bin\Release\net8.0-windows\System.Windows.Extensions.dll" />
+    <None Include="bin\Release\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\WebAPIV3.dll" />
+    <None Include="bin\Release\net8.0-windows\WebAPIV3.exe" />
+    <None Include="bin\Release\net8.0-windows\WebAPIV3.pdb" />
+    <None Include="bin\Release\net8.0-windows\WebGrease.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Release\net8.0-windows\ZstdSharp.dll" />
+  </ItemGroup>
+
+</Project>
